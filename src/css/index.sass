@@ -1,0 +1,52 @@
+@use 'sass:color'
+
+@import './vars.sass'
+@import './flex.sass'
+  
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lemon&family=Teko&display=swap')
+
+html, body
+  background-color: $BG-PRIMARY
+  color: $TEXT-PRIMARY
+
+  font-family: $FONT-DEFAULT
+
+.text-centered
+  text-align: center
+
+.header
+  font-size: $FONTSIZE-HEADER
+  font-family: $FONT-HEADER
+
+.sub-header
+  color: $TEXT-SECONDARY
+  max-width: 360px
+
+.main-container
+  margin-top: $MARGIN-CONTAINER
+
+::placeholder
+  color: $TEXT-GREY
+
+.form-input
+  background-color: color.scale($BG-GREY, $alpha: -60%)
+  border: none
+
+  padding-top: 12px
+  padding-bottom: 10px
+
+  padding-left: 32px
+  padding-right: 32px
+
+  outline: none
+  border-bottom: 1px solid white
+
+  font-size: $FONTSIZE-INPUT
+  color: $TEXT-GREY
+
+  transition: ease-in-out
+  transition-duration: .2s
+
+  &:hover, &:focus
+    background: color.scale(#B4B4B4, $alpha: -60%)
+    color: white
