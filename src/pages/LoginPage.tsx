@@ -1,4 +1,10 @@
 import TextInput from '../components/TextInput'
+import {
+  Lock,
+  Mail
+} from 'tabler-icons-react'
+
+import Button from '../components/Button'
 
 const Login = () => (
   <div
@@ -17,25 +23,44 @@ const Login = () => (
       Login with your email & password combination to continue.
     </div>
 
-    {
-      /* TODO: Use "headless" mantine inputs */
-    }
+
     <div
-      className='flex col wrap'
+      className='flex col wrap centered'
       style={
         {
           gap: '15px'
         }
       }
     >
-      <TextInput
-        placeholder='Email'
-      />
 
-      <TextInput
-        placeholder='Password'
-        type='password'
-      />
+      <div>
+        <TextInput
+          placeholder='Email'
+          icon={
+            <Mail color='white' />
+          }
+        />
+      </div>
+
+      <div>
+        <TextInput
+          error='Invalid password.'
+          placeholder='Password'
+          type='password'
+          icon={
+            <Lock color='white' />
+          }
+        />
+      </div>
+
+      <div>
+        <Button
+          color='cyan'
+          fullWidth
+        >
+          Login
+        </Button>
+      </div>
     </div>
   </div>
 )

@@ -28,25 +28,38 @@ html, body
 ::placeholder
   color: $TEXT-GREY
 
-.form-input
-  background-color: color.scale($BG-GREY, $alpha: -60%)
-  border: none
-
-  padding-top: 12px
+.btn
+  padding-top: 10px
   padding-bottom: 10px
 
-  padding-left: 32px
-  padding-right: 32px
+  font-size: $FONTSIZE-BTN
+  color: $TEXT-PRIMARY
+
+  background-color: transparent
+  border-radius: 5px
+
+  cursor: pointer
+  border-color: $BG-WHITE
 
   outline: none
-  border-bottom: 1px solid white
-
-  font-size: $FONTSIZE-INPUT
-  color: $TEXT-GREY
+  border: 1px solid
 
   transition: ease-in-out
   transition-duration: .2s
 
-  &:hover, &:focus
-    background: color.scale(#B4B4B4, $alpha: -60%)
-    color: white
+  &:hover
+    background-color: $BG-WHITE
+    color: $TEXT-BLACK
+
+    border-color: $BG-WHITE
+
+  // cyan variant
+  &.btn-cyan
+    border-color: $BG-CYAN
+    color: $TEXT-PRIMARY 
+
+    &:hover
+      background-color: $BG-CYAN
+
+  &.full-w
+    width: 100%
